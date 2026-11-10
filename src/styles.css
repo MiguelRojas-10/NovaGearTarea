@@ -1,0 +1,252 @@
+:root {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #e8e8e8;
+  background: #101010;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --accent: #c4c4c4;
+  --border: #303030;
+  --muted: #999;
+  --surface: #181818;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: #101010;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.login-container {
+  display: grid;
+  min-height: 100vh;
+  padding: 1.5rem;
+  place-items: center;
+}
+
+.glass-card {
+  width: min(100%, 400px);
+  padding: 2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.glass-card h1 {
+  margin: 0 0 0.4rem;
+  font-size: 1.7rem;
+}
+
+.glass-card > p {
+  margin: 0 0 1.5rem;
+  color: var(--muted);
+}
+
+.role-selector,
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.role-selector {
+  margin-bottom: 1.5rem;
+}
+
+.role-option {
+  padding: 0.45rem 0.8rem;
+  color: #c9c9c9;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.role-option.active {
+  color: #fff;
+  border-color: #888;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.7rem 0.75rem;
+  color: inherit;
+  background: #101010;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.input-group input:focus {
+  border-color: #888;
+  outline: 1px solid #888;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  color: #111;
+  background: #dedede;
+  border: 1px solid #dedede;
+  border-radius: 4px;
+}
+
+.btn-primary:hover {
+  background: #c7c7c7;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem max(1.25rem, calc((100% - 1000px) / 2));
+  background: #141414;
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-brand {
+  color: #f0f0f0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.role-badge {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.btn-logout {
+  padding: 0.4rem 0.65rem;
+  color: #ddd;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.btn-logout:hover {
+  border-color: #777;
+}
+
+.dashboard-container {
+  width: min(100% - 2.5rem, 1000px);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.page-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+.page-description {
+  margin: 0 0 1.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.75rem 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.product-list {
+  max-width: 760px;
+}
+
+.product-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.product-row:last-child {
+  border-bottom: 0;
+}
+
+.product-img {
+  width: 56px;
+  height: 56px;
+  flex: 0 0 56px;
+  object-fit: cover;
+  background: var(--surface);
+  border-radius: 4px;
+}
+
+.product-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.product-info h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.product-company {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.product-price {
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+
+  .dashboard-container {
+    width: calc(100% - 2rem);
+    padding: 1.5rem 0;
+  }
+}
